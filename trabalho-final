@@ -1,0 +1,232 @@
+def tutorial():
+    print("Seja bem vindo ao Jornada Em Busca da Sobrevivência!")
+    print("Esse é um jogo de aventura baseado em textos. Acompanhe a trajetória de João e seu amigo Marcos em meio a uma situação apocalíptica.")
+    print("O jogo se baseia em escolhas que serão apresentadas durante o trajeto.")
+    print("Você pode consultar seus itens a qualquer momento digitando 'Mochila'.")
+    print("Tenha um bom jogo :)")
+    resposta0 = input("Você entendeu?""\n")
+    if resposta0 == ("sim") or resposta0 == ("s"):
+        start()
+    elif resposta0 == ("não") or resposta0 == ("nao") or resposta0 == ("n"):
+        tutorial()
+    else:
+        print("Não entendi o que você falou")
+        tutorial()
+def start():
+    print("João, um estudante normal de 23 anos, segue sua rotina de estudos ao lado de seu amigo Marcos na Cidade de São Paulo.");
+    print("Na hora do almoço, os dois colegas se juntam aos outros estudantes no refeitório da faculdade, mas um deles se comporta de maneira estranha, bem diferente do normal.")
+    print("Depois de pouco tempo de conversa jogada fora, a televisão mostra uma chamada urgente!")
+    print("- Foram detectados diversos casos de pessoas se comportando fora do normal em várias partes do país. Comportamentos como canibalismo e automutilação são os principais sintomas dessa nova doença desconhecida.")
+    print("Profissionais e estudantes de grandes centros medicinais, como a Universidade de São Paulo, já estão empenhados em criar uma cura. Mais informações em breve!")
+    print("Todos ficam apreensivos com a reportagem, porém não dão a devida atenção. Ao chegar em casa, João percebe algo diferente no ambiente.")
+    print("- Pai! Mãe! Cheguei!")
+    print("Ao som de gritos no andar de cima, João se dirige ao quarto dos pais rapidamente.")
+    print("- Porque você está fazendo isso?")
+    print("Desesperado, o pai de João segura sua esposa, contendo-a de se automutilar.")
+    print("- Filho, pegue aquela caixa e corra, o vírus se espalhou e você precisa se salvar!")
+    print("- Não vou deixar você aqui desse jeito! Retruca João.")
+    print("- Vá! Eu cuido de sua mãe! Não se preocupe conosco! Você precisa levar essa caixa para eles!")
+    print("- Quem são eles?")
+    print("- Você vai descobrir, mas agora vá!")
+    print("Desesperado, preocupado e com medo. João parte em direção à casa de Marcos levando consigo uma caixa e uma montanha russa de emoções e dúvidas.")
+    print("No meio do caminho, João vê a figura de Marcos correndo em desespero.")
+    print("- João! João! Preciso da sua ajuda, a doença é real e já está pior do que imaginávamos. Meus pais já foram contaminados e eu não sei o que eu faço!")
+    print("- Comigo aconteceu a mesma coisa! Mas o meu pai me entregou essa caixa e disse que era para eles, só que eu não sei quem são eles.")
+    print("- Vamos levar para o pessoal da USP, eles estão trabalhando na cura, talvez seja deles que o seu pai estava falando!")
+    print("- Certo! Vamos para sua casa manter seus pais seguros para que quando possível possamos aplicar a cura neles também.")
+    print("Ao chegar na casa, Marcos diz não se lembrar onde está a chave, o que leva a dupla a entrar em seu primeiro desafio em meio ao apocalipse.")
+    casa_de_marcos()
+
+def game_over_q_b():
+    print("Game over. Você morreu")
+    print("Você quer tentar de onde parou, do início ou sair do jogo?")
+    resposta = input(">").lower()
+    if resposta == ("de onde parou") or resposta == ("de onde parei") or resposta("tentar de onde parou") or resposta("tentar de onde parei"):
+        casa_de_marcos()
+    elif resposta == ("do início") or resposta == ("do inicio") or resposta == ("inicio") or resposta == ("início"):
+        start()
+    elif resposta == ("sair do jogo") or resposta == ("sair"):
+        exit()
+
+def game_over_andando_e_usp_2():
+    print("Game over. Você morreu")
+    print("Você quer tentar de onde parou, do início ou sair do jogo?")
+    resposta = input(">").lower()
+    if resposta == ("de onde parou") or resposta == ("de onde parei") or resposta("tentar de onde parou") or resposta("tentar de onde parei"):
+        locomoção2()
+    elif resposta == ("do início") or resposta == ("do inicio") or resposta == ("inicio") or resposta == ("início"):
+        start()
+    elif resposta == ("sair do jogo") or resposta == ("sair"):
+        exit()
+
+def jogar_de_novo():
+    print("Você quer jogar de novo?")
+    resposta = input(">").lower()
+    if resposta == ("sim") or resposta == ("s"):
+        start()
+    else:
+        exit()
+
+def casa_de_marcos():
+    print("- João, onde procuramos primeiro?")
+    resposta1 = input("Cozinha, quarto ou banheiro?""\n").lower()
+    if resposta1 == ("cozinha"):
+        cozinha()
+    elif resposta1 == ("banheiro"):
+        banheiro()
+    elif resposta1 == ("quarto"):
+        quarto()
+    elif resposta1 == ("mochila"):
+        print("Caixa do pai")
+        casa_de_marcos()
+    else:
+        print("Não entendi o que você falou")
+        casa_de_marcos()
+def banheiro():
+    print("Ao entrar no banheiro vocês se deparam com a mãe de Marcos, totalmente controlada pela doença. Os dois ficam paralisados pelo medo enquanto ela avança para atacá-los.")
+    game_over_q_b()
+
+def quarto():
+    print("Ao entrar no quarto vocês se deparam com o pai de Marcos, totalmente controlado pela doença. Os dois ficam paralisados pelo medo enquanto ele avança para atacá-los.")
+    game_over_q_b()
+
+def cozinha():
+    print("- Na cozinha, vamos! Diz João.")
+    print("Assim que os amigos entram na cozinha, se deparam com a chave em cima da mesa")
+    print("Quando Marcos estava para sair, João tem uma ideia.")
+    print("- Marcos, e se levássemos mais essa faca para nos auxiliar?")
+    print("- Tem certeza? Se for para levar mais alguma coisa, eu prefiro esse kit médico.")
+    item1 = input("Faca ou Kit médico?""\n").lower()
+    if item1 == ("faca"):
+        print("-Certo, então vamos!")
+        locomoção()
+    elif item1 == ("kit médico") or item1 == ("kit") or item1 == ("kit medico"):
+        locomoção2()
+    elif item1 == ("mochila"):
+        print("Caixa do pai")
+        cozinha()
+    else:
+        print("Não entendi o que você falou")
+        cozinha()
+
+def locomoção():
+    print("Vocês finalmente saem da casa de Marcos e fazem questão de deixar ela bem trancada.")
+    print("- Certo, agora que asseguramos seus pais, como vamos fazer para ir para a USP?")
+    resposta2 = input("Carro ou andando?""\n").lower()
+    if resposta2 == ("carro"):
+        carro()
+    elif resposta2 == ("andando"):
+        andando()
+    elif resposta2 == ("mochila"):
+        print("Faca e caixa do pai")
+        locomoção()
+    else:
+        print("Não entendi o que você falou")
+        locomoção()
+
+def locomoção2():
+    print("Vocês finalmente saem da casa de Marcos e fazem questão de deixar ela bem trancada.")
+    print("- Certo, agora que asseguramos seus pais, como vamos fazer para ir para a USP?")
+    resposta2 = input("Carro ou andando?""\n").lower()
+    if resposta2 == ("carro"):
+        carro2()
+    elif resposta2 == ("andando"):
+        andando2()
+    elif resposta2 == ("mochila"):
+        print("Kit médico e caixa do pai")
+        locomoção2()
+    else:
+        print("Não entendi o que você falou")
+        locomoção2()
+
+def carro():
+    print("- Vamos usar o carro dos meus pais! A chave já está nesse molho mesmo e acho que estaremos mais seguros dentro do carro")
+    print("Dentro do carro, Marcos encontra o crachá de seu pai.")
+    print("- Olha, João! Encontrei o crachá do meu pai, talvez possamos usar ele para entrar na USP.")
+    print("- Boa! Guarde ele com muito cuidado.")
+    print("Apesar de ter uma segurança garantida, o fluxo em direção à USP está muito intenso devido ao grande número de pessoas tentando fugir da situação.")
+    print("Por não saberem dirigir muito bem, João e Marcos acabam se envolvendo em um acidente e ficam feridos.")
+    print("E, para piorar a situação, o carro que estavam utilizando ficou inutilizável.")
+    print("Com o carro inutilizado João e Marcos ficam a pé, e devido ao seus ferimentos a mobilidade deles fica prejudicada.")
+    print("Com a mobilidade afetada, João e Marcos são confrontados por infectados.")
+    print("- Eu disse que a faca seria útil Marcos!")
+    print("Com a faca em mãos, João enfrenta os infectados e seguem o caminho para a USP.")
+    chegada_na_usp()
+
+def carro2():
+    print("- Vamos usar o carro dos meus pais! A chave já está nesse molho mesmo e acho que estaremos mais seguros dentro do carro")
+    print("Dentro do carro, Marcos encontra o crachá de seu pai.")
+    print("- Olha, João! Encontrei o crachá do meu pai, talvez possamos usar ele para entrar na USP.")
+    print("- Boa! Guarde ele com muito cuidado.")
+    print("Apesar de ter uma segurança garantida, o fluxo em direção à USP está muito intenso devido ao grande número de pessoas tentando fugir da situação.")
+    print("Por não saberem dirigir muito bem, João e Marcos acabam se envolvendo em um acidente e ficam feridos.")
+    print("E, para piorar a situação, o carro que estavam utilizando ficou inutilizável.")
+    print("Com o carro inutilizado João e Marcos ficam a pé, e devido ao seus ferimentos a mobilidade deles fica prejudicada.")
+    print("- Ainda bem que pegamos o kit, eu disse que ele ia ser útil! Disse, Marcos.")
+    print("Agora, com seus ferimentos tratados, os amigos podem correr dos infectados pelo restante do caminho.")
+    chegada_na_usp()
+
+
+def andando():
+    print("- Acho melhor nós irmos a pé. A gente não sabe dirigir muito bem, podemos acabar nos machucando!")
+    print("Apesar de ser mais perigoso, os amigos seguem o caminho a pé. Ao longo do trajeto João e Marcos são atacados por infectados.")
+    print("João e Marcos se encontram em uma situação de alta vulnerabilidade")
+    print("- Que sorte que trouxemos a faca. Disse, João.")
+    print("Com a faca em mãos, João enfrenta os infectados e seguem o caminho para a USP")
+    chegada_na_usp2()
+
+def andando2():
+    print("- Acho melhor nós irmos a pé. A gente não sabe dirigir muito bem, podemos acabar nos machucando!")
+    print("Apesar de ser mais perigoso, os amigos seguem o caminho a pé. Ao longo do trajeto João e Marcos são atacados por infectados.")
+    print("João e Marcos se encontram em uma situação de alta vulnerabilidade.")
+    print("- Droga Marcos! Sem a faca estamos correndo muito risco andando por aqui.")
+    print("Por estarem indefesos são atacados ao longo do caminho por infectados.")
+    game_over_andando_e_usp_2()
+
+def chegada_na_usp():
+    print("Após um árduo caminho, João e Marcos finalmente chegam na universidade, mas ela já não parece tão receptiva quanto antes.")
+    print("Diversos guardas cercam muros por todo lado.")
+    print("- Parados, parados, parados! Disse o guarda.")
+    print("- Calma! Meu nome é Marcos e esse é meu amigo João! Nossos pais trabalham aqui, porém a doença já chegou até eles.")
+    print("Aproveitando a brecha, João conta o que passou com seu pai em casa.")
+    print("- Entendi, mas como posso saber se o que estão falando é realmente verdade ou apenas um blefe? Responde o guarda.")
+    print("- Acho que isso serve como prova.")
+    print("Marcos mostra o crachá de seu pai")
+    print("- Certo. Diz o guarda. - Me acompanhem por favor.")
+    print("O guarda acompanha os garotos até um laboratório secreto nos níveis inferiores da universidade, local onde estava sendo desenvolvida a cura.")
+    print("- Conversem com aquele homem, ele vai saber em o que vocês podem ser úteis.")
+    print("O guarda aponta para um homem de jaleco no fundo da sala.")
+    print("Nervosos e apreensivos com toda essa segurança, João e Marcos se aproximam do homem indicado pelo guarda.")
+    print("- Com licença, meu nome é João e esse é meu amigo Marcos! Nossos pais trabalham aqui, porém a doença já chegou até eles. Pouco antes de ser atacado pela minha mãe contaminada, meu pai me entregou essa caixa e disse para levar até “eles”. E eu acho que-")
+    print("- Graças a Deus, estávamos atrás disso há muito tempo! Diz o médico com lágrimas nos olhos. - Garoto, muito obrigado por trazer isso aqui! Vocês dois com certeza foram cruciais no desenvolvimento dessa cura!")
+    print("Então, João e Marcos terminam sua jornada.")
+    print("Com a caixa entregue e os especialistas prontos para fazerem seu trabalho, a cura foi rapidamente desenvolvida. Aos poucos, o governo fez operações para desinfectar os doentes. ")
+    print("Por terem ajudado no desenvolvimento da cura, João e Marcos ganharam prioridade na desinfecção de seus pais.")
+    print("- Estamos orgulhosos de vocês. Afirma o pai de João.")
+    print("- Imaginamos que devem ter passado por muita coisa, mas estamos felizes que tenham saído bem depois de tudo. Complementa o pai de Marcos.")
+    print("- Muito obrigado por nos salvarem! - Todos agradecem imensamente aos dois que, com muita bravura, lutaram para salvar a humanidade.")
+    print("Fim")
+    jogar_de_novo()
+def chegada_na_usp2():
+    print("Após um árduo caminho, João e Marcos finalmente chegam na universidade, mas ela já não parece tão receptiva quanto antes.")
+    print("Diversos guardas cercam muros por todo lado.")
+    print("- Parados, parados, parados! Disse o guarda.")
+    print("- Calma! Meu nome é Marcos e esse é meu amigo João! Nossos pais trabalham aqui, porém a doença já chegou até eles.")
+    print("Aproveitando a brecha, João conta o que passou com seu pai em casa.")
+    print("- Entendi, mas como posso saber se o que estão falando é realmente verdade ou apenas um blefe? Responde o guarda.")
+    print("- Não temos como provar, só temos essa caixa que meu pai pediu para trazer. Diz João.")
+    print("- Lamento crianças, mas não posso deixar vocês passarem até que me provem que sua história é real.")
+    print("Desapontados, João e Marcos pensam em alternativas para acessar o local.")
+    print("- E se nós contornássemos o prédio? Pergunta Marcos. - Talvez encontremos uma entrada de fundos?")
+    print("- Boa idéia, vamos lá!")
+    print("Porém, ao chegarem na retaguarda do edifício, percebem que algo está errado.")
+    print("- Marcos, não era para ter guardas aqui?")
+    print("- Mas tem, olha ali!")
+    print("Os dois garotos se aproximam de um grupo de guardas, na tentativa de conseguirem acesso por uma porta dos fundos.")
+    print("- Marcos, tem alguma coisa errada.")
+    print("- Para com isso, só vamos!")
+    print("Ao se aproximarem, perceberam que o grupo de guardas já estava totalmente infectado, mas já era tarde demais.")
+    game_over_andando_e_usp_2()
+
+tutorial()
+
